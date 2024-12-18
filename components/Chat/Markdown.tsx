@@ -1,6 +1,6 @@
 import React from 'react';
 import Markdown from 'react-markdown';
-import { dark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { Prism, SyntaxHighlighterProps } from 'react-syntax-highlighter';
 const SyntaxHighlighter = Prism as any as React.FC<SyntaxHighlighterProps>;
 
@@ -24,7 +24,7 @@ const MarkdownComponent: React.FC<MarkdownComponentProps> = ({ markdown }) => {
               // eslint-disable-next-line react/no-children-prop
               children={String(children).replace(/\n$/, '')}
               language={match[1]}
-              style={dark}
+              style={darcula}
             />
           ) : (
             <code {...rest} className={className}>
