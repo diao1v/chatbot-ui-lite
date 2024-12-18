@@ -1,15 +1,14 @@
 import React from 'react';
 import Markdown from 'react-markdown';
-import SyntaxHighlighter from 'react-syntax-highlighter/dist/cjs/prism';
 import { dark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-
-
+import { Prism, SyntaxHighlighterProps } from 'react-syntax-highlighter';
+const SyntaxHighlighter = Prism as any as React.FC<SyntaxHighlighterProps>;
 
 type MarkdownComponentProps = {
   markdown: string;
 };
 
-const MarkdownComponent:React.FC<MarkdownComponentProps> = ({ markdown }) => {
+const MarkdownComponent: React.FC<MarkdownComponentProps> = ({ markdown }) => {
   return (
     <Markdown
       // eslint-disable-next-line react/no-children-prop
